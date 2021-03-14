@@ -43,7 +43,7 @@ top.addEventListener('click', () => {
 // keydown------------------------55555
 document.addEventListener('keydown', event =>{
     if (event.key === "Escape"){
-        alert('Where are you going?!!!')
+        alert('Where are you going?!!!');
     }
 })
 
@@ -56,7 +56,7 @@ newMainPic.addEventListener('dblclick', () =>{
 function zoom(event){
     event.preventDefault();
     scale += event.deltaY *-0.01;
-    scale = Math.min(Math.max(.225, scale), 4)
+    scale = Math.min(Math.max(.225, scale), 4);
     image.style.transform =`scale(${scale})`
 }
 let scale = 1;
@@ -70,13 +70,20 @@ par.forEach(element =>{
         element.style.backgroundColor = '#B0BF1A'
     })
     window.addEventListener('scroll', ()=>{
-        element.style.fontFamily = 'Indie Flower'
+        element.style.fontFamily = 'Indie Flower';
     })
 })
 
-// focus
+// focus--------------------------1010101010
 button.forEach(words => {
     window.addEventListener('focus', () =>{
-        words.style.transform = 'translateY(8rem)'
+        words.style.transform = 'translateY(8rem)';
+    })
+})
+
+navBar.forEach(link => {
+    link.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
     })
 })
